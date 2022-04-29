@@ -1,4 +1,4 @@
-﻿namespace Fiap.BRQ.Core.Domain;
+﻿namespace Fiap.BRQ.Core.Domain.Shared;
 
 internal class DomainException : Exception
 {

@@ -6,13 +6,16 @@ public class Especialidade : Entity
 {
     public Especialidade() { }
 
-    public Especialidade(string nome, Certificado certificado)
+    public Especialidade(string nome, Candidato candidato, Certificado certificado)
     {
         Nome = nome;
-        Certificado = certificado;        
+        Candidato = candidato;
+        Certificado = certificado;
     }
 
     public string Nome { get; private set; } = default!;
+
+    public Candidato Candidato { get; private set; }
 
     public Certificado? Certificado { get; private set; }
 }
