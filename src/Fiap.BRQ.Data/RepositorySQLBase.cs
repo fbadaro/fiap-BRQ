@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Fiap.BRQ.Data;
 
-internal class RepositorySQLBase<TEntity, TPrimaryKey> : IRepositoryBase<TEntity, TPrimaryKey> 
+public class RepositorySQLBase<TEntity, TPrimaryKey> : IRepositoryBase<TEntity, TPrimaryKey> 
     where TEntity : class, IEntity<TPrimaryKey>
 {
     protected readonly BRQDBContext _context;

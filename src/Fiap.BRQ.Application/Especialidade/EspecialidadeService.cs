@@ -1,6 +1,6 @@
 ﻿namespace Fiap.BRQ.Application.Especialidade;
 
-internal class EspecialidadeService : IEspecilidadeService
+public class EspecialidadeService : IEspecilidadeService
 {
     public Task<EspecialidadeDTO> CreateAsync(EspecialidadeDTO entityDTO)
     {

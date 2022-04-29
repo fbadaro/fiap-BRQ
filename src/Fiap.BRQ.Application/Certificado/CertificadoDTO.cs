@@ -6,6 +6,6 @@ using System.Threading.Tasks;
 
 namespace Fiap.BRQ.Application.Certificado;
 
-internal class CertificadoDTO : EntityDTO
+public class CertificadoDTO : EntityDTO
 {
 }

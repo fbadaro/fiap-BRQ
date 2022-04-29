@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Fiap.BRQ.Application\Fiap.BRQ.Application.csproj" />
+    <ProjectReference Include="..\Fiap.BRQ.Core\Fiap.BRQ.Core.csproj" />
+    <ProjectReference Include="..\Fiap.BRQ.Data\Fiap.BRQ.Data.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,5 +1,5 @@
 ﻿namespace Fiap.BRQ.Application.Candidato;
 
-internal interface ICandidatoService : IApplicationService<CandidatoDTO>
+public interface ICandidatoService : IApplicationService<CandidatoDTO>
 {
 }

@@ -1,6 +1,6 @@
 ﻿namespace Fiap.BRQ.Application.Candidato;
 
-internal class CandidatoService : ICandidatoService
+public class CandidatoService : ICandidatoService
 {
     public Task<CandidatoDTO> CreateAsync(CandidatoDTO entityDTO)
     {

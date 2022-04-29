@@ -1,5 +1,5 @@
 ﻿namespace Fiap.BRQ.Application.Especialidade;
 
-internal class EspecialidadeDTO : EntityDTO
+public class EspecialidadeDTO : EntityDTO
 {
 }

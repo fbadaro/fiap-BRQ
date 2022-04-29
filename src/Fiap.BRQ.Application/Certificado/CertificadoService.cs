@@ -1,6 +1,6 @@
 ﻿namespace Fiap.BRQ.Application.Certificado;
 
-internal class CertificadoService : ICertificadoService
+public class CertificadoService : ICertificadoService
 {
     public Task<CertificadoDTO> CreateAsync(CertificadoDTO entityDTO)
     {
