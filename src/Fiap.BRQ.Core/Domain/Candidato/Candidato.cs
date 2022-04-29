@@ -29,4 +29,6 @@ public class Candidato : Entity
     public RG RG { get; private set; } = default!;
 
     public string Telefone { get; private set; } = default!;
+
+    public List<Especialidade> Especialidades { get; private set; } = new List<Especialidade>();
 }

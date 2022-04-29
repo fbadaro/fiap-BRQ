@@ -1,8 +1,7 @@
 ﻿using Fiap.BRQ.Core.Entities;
-using Fiap.BRQ.Data.Repository;
 using Microsoft.EntityFrameworkCore;
 
-namespace Fiap.BRQ.Data.Database;
+namespace Fiap.BRQ.Data;
 
 internal class RepositorySQLBase<TEntity, TPrimaryKey> : IRepositoryBase<TEntity, TPrimaryKey> 
     where TEntity : class, IEntity<TPrimaryKey>

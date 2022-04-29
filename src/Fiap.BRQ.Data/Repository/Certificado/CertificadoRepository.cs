@@ -1,4 +1,4 @@
-﻿namespace Fiap.BRQ.Data.Database.Repository.Certificado;
+﻿namespace Fiap.BRQ.Data.Repository.Certificado;
 
 internal class CertificadoRepository : RepositorySQLBase<Core.Domain.Certificado, Guid>, ICertificadoRepository
 {

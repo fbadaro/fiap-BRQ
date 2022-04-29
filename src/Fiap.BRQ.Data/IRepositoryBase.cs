@@ -1,8 +1,8 @@
 ﻿using Fiap.BRQ.Core.Entities;
 
-namespace Fiap.BRQ.Data.Repository;
+namespace Fiap.BRQ.Data;
 
-public interface IRepositoryBase<TEntity, TPrimaryKey> : IDisposable where TEntity : IEntity<TPrimaryKey>
+public interface IRepositoryBase<TEntity, TPrimaryKey> : IDisposable where TEntity : class, IEntity<TPrimaryKey>
 {
     Task<IEnumerable<TEntity>> GetAllAsync();
 
