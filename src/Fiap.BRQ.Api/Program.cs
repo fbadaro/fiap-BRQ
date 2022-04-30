@@ -31,6 +31,11 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+builder.Services.AddCors(options => options.AddPolicy("BRQCorsPolicy", builder =>
+{
+    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+}));
+
 builder.Services.AddAutoMapperApplication(typeof(Program).Assembly);
 builder.Services.AddDBContextApplication(IsDevelopment: builderInDevelopment);
 builder.Services.AddServiceApplication();
@@ -38,6 +43,7 @@ builder.Services.AddServiceApplication();
 var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
+app.UseCors("BRQCorsPolicy");
 app.UseHttpsRedirection();
 
 // Endpoints

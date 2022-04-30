@@ -32,31 +32,12 @@ namespace Fiap.BRQ.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "BRQ03_CERTIFICADO",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Nome = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
-                    OrganizacaoEmissora = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
-                    Expiracao = table.Column<bool>(type: "bit", nullable: false),
-                    DataEmissao = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DataExpiracao = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CodigoCredencial = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    UrlCredencial = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_BRQ03_CERTIFICADO", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "BRQ02_ESPECIALIDADE",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Nome = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
-                    CandidatoId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    CertificadoId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    CandidatoId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -67,11 +48,31 @@ namespace Fiap.BRQ.Data.Migrations
                         principalTable: "BRQ01_CANDIDATO",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "BRQ03_CERTIFICADO",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Nome = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    OrganizacaoEmissora = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    Expiracao = table.Column<bool>(type: "bit", nullable: false),
+                    DataEmissao = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DataExpiracao = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CodigoCredencial = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    UrlCredencial = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    EspecialidadeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BRQ03_CERTIFICADO", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_BRQ02_ESPECIALIDADE_BRQ03_CERTIFICADO_CertificadoId",
-                        column: x => x.CertificadoId,
-                        principalTable: "BRQ03_CERTIFICADO",
-                        principalColumn: "Id");
+                        name: "FK_BRQ03_CERTIFICADO_BRQ02_ESPECIALIDADE_EspecialidadeId",
+                        column: x => x.EspecialidadeId,
+                        principalTable: "BRQ02_ESPECIALIDADE",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -80,21 +81,21 @@ namespace Fiap.BRQ.Data.Migrations
                 column: "CandidatoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_BRQ02_ESPECIALIDADE_CertificadoId",
-                table: "BRQ02_ESPECIALIDADE",
-                column: "CertificadoId");
+                name: "IX_BRQ03_CERTIFICADO_EspecialidadeId",
+                table: "BRQ03_CERTIFICADO",
+                column: "EspecialidadeId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "BRQ03_CERTIFICADO");
+
+            migrationBuilder.DropTable(
                 name: "BRQ02_ESPECIALIDADE");
 
             migrationBuilder.DropTable(
                 name: "BRQ01_CANDIDATO");
-
-            migrationBuilder.DropTable(
-                name: "BRQ03_CERTIFICADO");
         }
     }
 }

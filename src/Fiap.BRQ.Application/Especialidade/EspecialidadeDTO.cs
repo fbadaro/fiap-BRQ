@@ -7,8 +7,6 @@ public class EspecialidadeDTO : EntityDTO
 {
     [Required(ErrorMessage = "É necessário informar o nome da Especialidade", AllowEmptyStrings = false)]
     public string Nome { get; set; } = default!;
-
-    //public CandidatoDTO Candidato { get; set; } = default!;
-
-    public CertificadoDTO Certificado { get; set; } = default!;
+    
+    public List<CertificadoDTO> Certificados { get; set; } = new List<CertificadoDTO>();
 }

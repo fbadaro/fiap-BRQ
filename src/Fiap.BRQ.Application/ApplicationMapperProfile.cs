@@ -37,5 +37,7 @@ public class ApplicationMapperProfile : Profile
         // Default
         CreateMap<EspecialidadeDTO, Core.Domain.Especialidade>().ReverseMap();
         CreateMap<CertificadoDTO, Core.Domain.Certificado>().ReverseMap();
+        
+        CreateMap<List<CertificadoDTO>, Core.Domain.Certificado>().ReverseMap();
     }
 }

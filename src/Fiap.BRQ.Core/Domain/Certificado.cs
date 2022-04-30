@@ -8,7 +8,7 @@ public class Certificado : Entity
     {
     }
 
-    public Certificado(string nome, string organizacaoEmissora, bool expiracao, DateTime dataEmissao, DateTime dataExpiracao, string codigoCredencial, string urlCredencial)
+    public Certificado(string nome, string organizacaoEmissora, bool expiracao, DateTime dataEmissao, DateTime dataExpiracao, string codigoCredencial, string urlCredencial, Especialidade especialidade)
     {
         Nome = nome;
         OrganizacaoEmissora = organizacaoEmissora;
@@ -17,6 +17,7 @@ public class Certificado : Entity
         DataExpiracao = dataExpiracao;
         CodigoCredencial = codigoCredencial;
         UrlCredencial = urlCredencial;
+        Especialidade = especialidade;
     }    
 
     public string Nome { get; private set; } = default!;
@@ -32,4 +33,6 @@ public class Certificado : Entity
     public string CodigoCredencial { get; private set; } = default!;
 
     public string UrlCredencial { get; private set; } = default!;
+
+    public Especialidade Especialidade { get; private set; } = default!;
 }

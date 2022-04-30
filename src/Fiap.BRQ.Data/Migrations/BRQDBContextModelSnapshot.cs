@@ -59,6 +59,9 @@ namespace Fiap.BRQ.Data.Migrations
                     b.Property<DateTime>("DataExpiracao")
                         .HasColumnType("datetime2");
 
+                    b.Property<Guid>("EspecialidadeId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<bool>("Expiracao")
                         .HasColumnType("bit");
 
@@ -79,6 +82,8 @@ namespace Fiap.BRQ.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("EspecialidadeId");
+
                     b.ToTable("BRQ03_CERTIFICADO", (string)null);
                 });
 
@@ -91,9 +96,6 @@ namespace Fiap.BRQ.Data.Migrations
                     b.Property<Guid>("CandidatoId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("CertificadoId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(150)
@@ -102,8 +104,6 @@ namespace Fiap.BRQ.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CandidatoId");
-
-                    b.HasIndex("CertificadoId");
 
                     b.ToTable("BRQ02_ESPECIALIDADE", (string)null);
                 });
@@ -220,6 +220,17 @@ namespace Fiap.BRQ.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Fiap.BRQ.Core.Domain.Certificado", b =>
+                {
+                    b.HasOne("Fiap.BRQ.Core.Domain.Especialidade", "Especialidade")
+                        .WithMany("Certificados")
+                        .HasForeignKey("EspecialidadeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Especialidade");
+                });
+
             modelBuilder.Entity("Fiap.BRQ.Core.Domain.Especialidade", b =>
                 {
                     b.HasOne("Fiap.BRQ.Core.Domain.Candidato", "Candidato")
@@ -228,18 +239,17 @@ namespace Fiap.BRQ.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Fiap.BRQ.Core.Domain.Certificado", "Certificado")
-                        .WithMany()
-                        .HasForeignKey("CertificadoId");
-
                     b.Navigation("Candidato");
-
-                    b.Navigation("Certificado");
                 });
 
             modelBuilder.Entity("Fiap.BRQ.Core.Domain.Candidato", b =>
                 {
                     b.Navigation("Especialidades");
+                });
+
+            modelBuilder.Entity("Fiap.BRQ.Core.Domain.Especialidade", b =>
+                {
+                    b.Navigation("Certificados");
                 });
 #pragma warning restore 612, 618
         }
