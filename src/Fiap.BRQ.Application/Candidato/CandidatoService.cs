@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Fiap.BRQ.Core.Domain;
+using Fiap.BRQ.CrossCutting.Extensions;
 using Fiap.BRQ.Data.Repository.Candidato;
-using FIap.BRQ.CrossCutting.Extensions;
 using FluentValidation;
 
 namespace Fiap.BRQ.Application.Candidato;

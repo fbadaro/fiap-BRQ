@@ -1,4 +1,4 @@
-﻿namespace FIap.BRQ.CrossCutting.Extensions;
+﻿namespace Fiap.BRQ.CrossCutting.Extensions;
 
 public static class StringExtensions
 {
