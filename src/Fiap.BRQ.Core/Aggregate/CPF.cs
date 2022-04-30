@@ -15,7 +15,5 @@ public class CPF
 
     public string Emissor { get; set; } = default!;
 
-    public string UF { get; set; } = default!;
-
-    private bool IsValid() => true;
+    public string UF { get; set; } = default!;    
 }

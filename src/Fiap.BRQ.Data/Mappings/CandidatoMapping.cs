@@ -44,8 +44,7 @@ internal class CandidatoMapping : IEntityTypeConfiguration<Candidato>
                 .IsRequired()
                 .HasMaxLength(150);
 
-            endereco.Property(e => e.Complemento)
-                .IsRequired()
+            endereco.Property(e => e.Complemento)                
                 .HasMaxLength(30);
 
             endereco.Property(e => e.Bairro)

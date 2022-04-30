@@ -21,9 +21,9 @@ public static class ApplicationBootstraper
                 .AddJsonFile(Directory.GetCurrentDirectory() + "/../Fiap.BRQ.Api/appsettings.json")
                 .Build();
 
-        if (IsDevelopment)
-            services.AddDbContext<BRQDBContext>(options =>
-                options.UseInMemoryDatabase("UseInMemoryDatabase"));
+        //if (IsDevelopment)
+        //    services.AddDbContext<BRQDBContext>(options =>
+        //        options.UseInMemoryDatabase("UseInMemoryDatabase"));
 
         services.AddDbContext<BRQDBContext>(options =>
                 options.UseSqlServer(configuration["SqlServer:ConnectionString"]));
@@ -35,9 +35,10 @@ public static class ApplicationBootstraper
         services.AddScoped<ICandidatoService, CandidatoService>();
         services.AddScoped<ICandidatoRepository, CandidatoRepository>();
         services.AddScoped<IRepositoryBase<Candidato, Guid>, RepositorySQLBase<Candidato, Guid>>();
+        services.AddSingleton<CandidatoValidator>();
 
         // Especilidade Service/Repository
-        services.AddScoped<IEspecilidadeService, EspecialidadeService>();
+        services.AddScoped<IEspecialidadeService, EspecialidadeService>();
         services.AddScoped<IEspecialidadeRepository, EspecialidadeRepository>();
         services.AddScoped<IRepositoryBase<Especialidade, Guid>, RepositorySQLBase<Especialidade, Guid>>();
 

@@ -11,10 +11,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Folder Include="Actions\" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <ProjectReference Include="..\Fiap.BRQ.Application\Fiap.BRQ.Application.csproj" />
 	  <ProjectReference Include="..\Fiap.BRQ.Infrastructure\Fiap.BRQ.Infrastructure.csproj" />
 	</ItemGroup>

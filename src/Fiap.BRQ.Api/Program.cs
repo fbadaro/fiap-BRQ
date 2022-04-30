@@ -1,4 +1,6 @@
+using Fiap.BRQ.Api.Actions;
 using Fiap.BRQ.Infrastructure.ApplicationConfiguration;
+using Fiap.BRQ.Infrastructure.ApplicationServices;
 using Microsoft.AspNetCore.Http.Json;
 using Microsoft.OpenApi.Models;
 using System.Text.Json;
@@ -30,15 +32,17 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 builder.Services.AddAutoMapperApplication(typeof(Program).Assembly);
+builder.Services.AddDBContextApplication(IsDevelopment: builderInDevelopment);
+builder.Services.AddServiceApplication();
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
+app.UseSwagger();
+app.UseSwaggerUI();
 app.UseHttpsRedirection();
+
+// Endpoints
+app.MapCandidatoEndpoint();
+app.MapEspecialidadeEndpoint();
+app.MapCertificadoEndpoint();
+
 app.Run();

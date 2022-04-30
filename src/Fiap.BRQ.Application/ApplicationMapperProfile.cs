@@ -2,6 +2,7 @@
 using Fiap.BRQ.Application.Candidato;
 using Fiap.BRQ.Application.Certificado;
 using Fiap.BRQ.Application.Especialidade;
+using Fiap.BRQ.Core.Aggregate;
 
 namespace Fiap.BRQ.Application;
 

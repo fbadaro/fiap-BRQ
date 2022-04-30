@@ -15,7 +15,7 @@ public class Especialidade : Entity
 
     public string Nome { get; private set; } = default!;
 
-    public Candidato Candidato { get; private set; }
+    public Candidato Candidato { get; private set; } = default!;
 
     public Certificado? Certificado { get; private set; }
 }

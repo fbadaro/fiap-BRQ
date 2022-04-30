@@ -9,7 +9,5 @@ public class RG
 
     public RG() { }
 
-    public string Numero { get; private set; } = default!;
-
-    private bool IsValid() => true;
+    public string Numero { get; set; } = default!;    
 }

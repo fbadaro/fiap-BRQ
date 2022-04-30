@@ -5,13 +5,15 @@ VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.BRQ.Api", "src\Fiap.BRQ.Api\Fiap.BRQ.Api.csproj", "{8D5B782A-5258-4006-8806-791964BF46CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.BRQ.Application", "src\Fiap.BRQ.Application\Fiap.BRQ.Application.csproj", "{77CE7520-A00B-4FD9-AC0F-F1CE6749BC23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.BRQ.Application", "src\Fiap.BRQ.Application\Fiap.BRQ.Application.csproj", "{77CE7520-A00B-4FD9-AC0F-F1CE6749BC23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.BRQ.Core", "src\Fiap.BRQ.Core\Fiap.BRQ.Core.csproj", "{C8382F88-0C07-4B37-8937-5169CF03B00B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.BRQ.Core", "src\Fiap.BRQ.Core\Fiap.BRQ.Core.csproj", "{C8382F88-0C07-4B37-8937-5169CF03B00B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.BRQ.Data", "src\Fiap.BRQ.Data\Fiap.BRQ.Data.csproj", "{8FB3E287-CDE8-4B25-908B-3F0A4E807F5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.BRQ.Data", "src\Fiap.BRQ.Data\Fiap.BRQ.Data.csproj", "{8FB3E287-CDE8-4B25-908B-3F0A4E807F5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.BRQ.Infrastructure", "src\Fiap.BRQ.Infrastructure\Fiap.BRQ.Infrastructure.csproj", "{58606EC2-20C7-42F1-A1BA-28ACB74625BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.BRQ.Infrastructure", "src\Fiap.BRQ.Infrastructure\Fiap.BRQ.Infrastructure.csproj", "{58606EC2-20C7-42F1-A1BA-28ACB74625BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIap.BRQ.CrossCutting", "FIap.BRQ.CrossCutting\FIap.BRQ.CrossCutting.csproj", "{0CEF8E9E-DAEF-4CEF-A670-2520678D0DAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{58606EC2-20C7-42F1-A1BA-28ACB74625BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58606EC2-20C7-42F1-A1BA-28ACB74625BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58606EC2-20C7-42F1-A1BA-28ACB74625BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CEF8E9E-DAEF-4CEF-A670-2520678D0DAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CEF8E9E-DAEF-4CEF-A670-2520678D0DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CEF8E9E-DAEF-4CEF-A670-2520678D0DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CEF8E9E-DAEF-4CEF-A670-2520678D0DAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

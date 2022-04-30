@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Fiap.BRQ.Data.Migrations
 {
     [DbContext(typeof(BRQDBContext))]
-    [Migration("20220429010209_InitialCreate")]
+    [Migration("20220430022828_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

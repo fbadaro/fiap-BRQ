@@ -20,12 +20,10 @@ internal class CertificadoMapping : IEntityTypeConfiguration<Certificado>
             .IsRequired()
             .HasMaxLength(150);
 
-        builder.Property(c => c.CodigoCredencial)
-            .IsRequired()
+        builder.Property(c => c.CodigoCredencial)            
             .HasMaxLength(50);
 
-        builder.Property(c => c.UrlCredencial)
-            .IsRequired()
+        builder.Property(c => c.UrlCredencial)            
             .HasMaxLength(500);
     }
 }
