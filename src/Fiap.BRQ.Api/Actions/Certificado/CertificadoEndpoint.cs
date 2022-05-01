@@ -7,16 +7,16 @@ public static class CertificadoEndpoint
     public static void MapCertificadoEndpoint(this WebApplication? app)
     {
         // LIST
-        app!.MapGet("/certificado", async (ICertificadoService _CertificadoAppService) =>
-            await _CertificadoAppService.GetAllAsync())
+        app!.MapGet("/certificado", async (ICertificadoService _certificadoAppService) =>
+            await _certificadoAppService.GetAllAsync())
         .Produces<List<CertificadoDTO>>(StatusCodes.Status200OK)
         .WithName("GetCertificado")
         .WithTags("Certificado");
 
         // GET
-        app!.MapGet("/certificado/{id}", async (ICertificadoService _CertificadoAppService, Guid id) =>
+        app!.MapGet("/certificado/{id}", async (ICertificadoService _certificadoAppService, Guid id) =>
         {
-            var result = await _CertificadoAppService.GetById(id);
+            var result = await _certificadoAppService.GetById(id);
 
             return result != null
                 ? Results.Ok(result)
@@ -28,9 +28,9 @@ public static class CertificadoEndpoint
         .WithTags("Certificado");
 
         // POST
-        app!.MapPost("/certificado", async (ICertificadoService _CertificadoAppService, CertificadoDTO Certificado) =>
+        app!.MapPost("/certificado", async (ICertificadoService _certificadoAppService, CertificadoDTO Certificado) =>
         {
-            var result = await _CertificadoAppService.CreateAsync(Certificado);
+            var result = await _certificadoAppService.CreateAsync(Certificado);
 
             return result != null
             ? Results.CreatedAtRoute("GetCertificadoById", new { id = result.Id }, Certificado)
@@ -42,9 +42,9 @@ public static class CertificadoEndpoint
         .WithTags("Certificado");
 
         // UPDATE
-        app!.MapPut("/certificado/{id}", async (ICertificadoService _CertificadoAppService, Guid id, CertificadoDTO Certificado) =>
+        app!.MapPut("/certificado/{id}", async (ICertificadoService _certificadoAppService, Guid id, CertificadoDTO Certificado) =>
         {
-            var result = await _CertificadoAppService.UpdateAsync(Certificado);
+            var result = await _certificadoAppService.UpdateAsync(Certificado);
 
             return result != null
                 ? Results.NoContent()
@@ -57,8 +57,8 @@ public static class CertificadoEndpoint
         .WithTags("Certificado");
 
         // DELETE
-        app!.MapDelete("/certificado/{id}", async (ICertificadoService _CertificadoAppService, Guid id) =>
-            await _CertificadoAppService.DeleteAsync(id))
+        app!.MapDelete("/certificado/{id}", async (ICertificadoService _certificadoAppService, Guid id) =>
+            await _certificadoAppService.DeleteAsync(id))
         .Produces(StatusCodes.Status400BadRequest)
         .Produces(StatusCodes.Status204NoContent)
         .Produces(StatusCodes.Status404NotFound)

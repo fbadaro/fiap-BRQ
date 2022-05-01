@@ -1,0 +1,1914 @@
+{
+	"info": {
+		"_postman_id": "54d2a4f8-5373-45ae-8c58-57a96f5b26b7",
+		"name": "BRQ Candidatos API",
+		"description": "Api para cadastro e consulta de candidatos para a BRQ\n\nContact Support:\n Name: brq.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "candidato",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Get Candidato By Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/candidato/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"candidato",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "ad sunt dolor Lorem id",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/candidato/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"candidato",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"cpfEmissor\": \"ut magna\",\n  \"cpfNumero\": \"id dolore occaecat\",\n  \"cpfuf\": \"ea aliquip\",\n  \"emailEndereco\": \"aliqua nulla ea\",\n  \"enderecoBairro\": \"nostrud qui ut adi\",\n  \"enderecoCEP\": \"no\",\n  \"enderecoLogradouro\": \"sit ullamco\",\n  \"especialidades\": [\n    {\n      \"nome\": \"qui ipsum elit\",\n      \"id\": \"be068088-a44c-b55d-0fc1-411d326b5920\",\n      \"certificados\": [\n        {\n          \"nome\": \"incididunt cillum mollit\",\n          \"organizacaoEmissora\": \"sit magna\",\n          \"id\": \"urn:uuid:01967a6b-f18f-694e-f865-f47a64a5c870\",\n          \"expiracao\": false,\n          \"dataEmissao\": \"1996-08-15T07:03:53.295Z\",\n          \"dataExpiracao\": \"2001-12-21T07:44:31.068Z\",\n          \"codigoCredencial\": \"elit velit pariatur sed\",\n          \"urlCredencial\": \"sint Excepteur i\"\n        },\n        {\n          \"nome\": \"dolor magna\",\n          \"organizacaoEmissora\": \"enim\",\n          \"id\": \"450100ac-4fd7-573a-6bed-be7cbda5c747\",\n          \"expiracao\": true,\n          \"dataEmissao\": \"1989-08-12T12:14:37.609Z\",\n          \"dataExpiracao\": \"1949-03-21T15:47:42.635Z\",\n          \"codigoCredencial\": \"Ut ea\",\n          \"urlCredencial\": \"do irure dolore Ut\"\n        }\n      ]\n    },\n    {\n      \"nome\": \"Excepteur elit nostrud\",\n      \"id\": \"urn:uuid:a5454682-1aec-52ee-1894-db01feccca3e\",\n      \"certificados\": [\n        {\n          \"nome\": \"Ut in\",\n          \"organizacaoEmissora\": \"reprehenderit do sed labore\",\n          \"id\": \"urn:uuid:05cb38dc-39f8-cddc-654d-3bcccd019c48\",\n          \"expiracao\": true,\n          \"dataEmissao\": \"2021-07-02T06:12:20.222Z\",\n          \"dataExpiracao\": \"1959-09-18T17:37:05.805Z\",\n          \"codigoCredencial\": \"ullamco est non ex velit\",\n          \"urlCredencial\": \"fugiat\"\n        },\n        {\n          \"nome\": \"magna\",\n          \"organizacaoEmissora\": \"quis sed \",\n          \"id\": \"urn:uuid:806d854b-61f5-0b89-de9d-b866149587be\",\n          \"expiracao\": false,\n          \"dataEmissao\": \"1995-08-10T04:35:22.012Z\",\n          \"dataExpiracao\": \"1963-10-22T04:50:24.083Z\",\n          \"codigoCredencial\": \"elit ex amet dolore sunt\",\n          \"urlCredencial\": \"est proident id deserunt ut\"\n        }\n      ]\n    }\n  ],\n  \"rgNumero\": \"e\",\n  \"id\": \"urn:uuid:e6597f5d-b361-9697-c368-b1b1d2793258\",\n  \"nome\": \"sit\",\n  \"enderecoComplemento\": \"in\",\n  \"telefone\": \"et do\"\n}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/candidato/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"candidato",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Put Candidato",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"cpfEmissor\": \"ut magna\",\n  \"cpfNumero\": \"id dolore occaecat\",\n  \"cpfuf\": \"ea aliquip\",\n  \"emailEndereco\": \"aliqua nulla ea\",\n  \"enderecoBairro\": \"nostrud qui ut adi\",\n  \"enderecoCEP\": \"no\",\n  \"enderecoLogradouro\": \"sit ullamco\",\n  \"especialidades\": [\n    {\n      \"nome\": \"qui ipsum elit\",\n      \"id\": \"be068088-a44c-b55d-0fc1-411d326b5920\",\n      \"certificados\": [\n        {\n          \"nome\": \"incididunt cillum mollit\",\n          \"organizacaoEmissora\": \"sit magna\",\n          \"id\": \"urn:uuid:01967a6b-f18f-694e-f865-f47a64a5c870\",\n          \"expiracao\": false,\n          \"dataEmissao\": \"1996-08-15T07:03:53.295Z\",\n          \"dataExpiracao\": \"2001-12-21T07:44:31.068Z\",\n          \"codigoCredencial\": \"elit velit pariatur sed\",\n          \"urlCredencial\": \"sint Excepteur i\"\n        },\n        {\n          \"nome\": \"dolor magna\",\n          \"organizacaoEmissora\": \"enim\",\n          \"id\": \"450100ac-4fd7-573a-6bed-be7cbda5c747\",\n          \"expiracao\": true,\n          \"dataEmissao\": \"1989-08-12T12:14:37.609Z\",\n          \"dataExpiracao\": \"1949-03-21T15:47:42.635Z\",\n          \"codigoCredencial\": \"Ut ea\",\n          \"urlCredencial\": \"do irure dolore Ut\"\n        }\n      ]\n    },\n    {\n      \"nome\": \"Excepteur elit nostrud\",\n      \"id\": \"urn:uuid:a5454682-1aec-52ee-1894-db01feccca3e\",\n      \"certificados\": [\n        {\n          \"nome\": \"Ut in\",\n          \"organizacaoEmissora\": \"reprehenderit do sed labore\",\n          \"id\": \"urn:uuid:05cb38dc-39f8-cddc-654d-3bcccd019c48\",\n          \"expiracao\": true,\n          \"dataEmissao\": \"2021-07-02T06:12:20.222Z\",\n          \"dataExpiracao\": \"1959-09-18T17:37:05.805Z\",\n          \"codigoCredencial\": \"ullamco est non ex velit\",\n          \"urlCredencial\": \"fugiat\"\n        },\n        {\n          \"nome\": \"magna\",\n          \"organizacaoEmissora\": \"quis sed \",\n          \"id\": \"urn:uuid:806d854b-61f5-0b89-de9d-b866149587be\",\n          \"expiracao\": false,\n          \"dataEmissao\": \"1995-08-10T04:35:22.012Z\",\n          \"dataExpiracao\": \"1963-10-22T04:50:24.083Z\",\n          \"codigoCredencial\": \"elit ex amet dolore sunt\",\n          \"urlCredencial\": \"est proident id deserunt ut\"\n        }\n      ]\n    }\n  ],\n  \"rgNumero\": \"e\",\n  \"id\": \"urn:uuid:e6597f5d-b361-9697-c368-b1b1d2793258\",\n  \"nome\": \"sit\",\n  \"enderecoComplemento\": \"in\",\n  \"telefone\": \"et do\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/candidato/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"candidato",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "ad sunt dolor Lorem id",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"cpfEmissor\": \"ut magna\",\n  \"cpfNumero\": \"id dolore occaecat\",\n  \"cpfuf\": \"ea aliquip\",\n  \"emailEndereco\": \"aliqua nulla ea\",\n  \"enderecoBairro\": \"nostrud qui ut adi\",\n  \"enderecoCEP\": \"no\",\n  \"enderecoLogradouro\": \"sit ullamco\",\n  \"especialidades\": [\n    {\n      \"nome\": \"qui ipsum elit\",\n      \"id\": \"be068088-a44c-b55d-0fc1-411d326b5920\",\n      \"certificados\": [\n        {\n          \"nome\": \"incididunt cillum mollit\",\n          \"organizacaoEmissora\": \"sit magna\",\n          \"id\": \"urn:uuid:01967a6b-f18f-694e-f865-f47a64a5c870\",\n          \"expiracao\": false,\n          \"dataEmissao\": \"1996-08-15T07:03:53.295Z\",\n          \"dataExpiracao\": \"2001-12-21T07:44:31.068Z\",\n          \"codigoCredencial\": \"elit velit pariatur sed\",\n          \"urlCredencial\": \"sint Excepteur i\"\n        },\n        {\n          \"nome\": \"dolor magna\",\n          \"organizacaoEmissora\": \"enim\",\n          \"id\": \"450100ac-4fd7-573a-6bed-be7cbda5c747\",\n          \"expiracao\": true,\n          \"dataEmissao\": \"1989-08-12T12:14:37.609Z\",\n          \"dataExpiracao\": \"1949-03-21T15:47:42.635Z\",\n          \"codigoCredencial\": \"Ut ea\",\n          \"urlCredencial\": \"do irure dolore Ut\"\n        }\n      ]\n    },\n    {\n      \"nome\": \"Excepteur elit nostrud\",\n      \"id\": \"urn:uuid:a5454682-1aec-52ee-1894-db01feccca3e\",\n      \"certificados\": [\n        {\n          \"nome\": \"Ut in\",\n          \"organizacaoEmissora\": \"reprehenderit do sed labore\",\n          \"id\": \"urn:uuid:05cb38dc-39f8-cddc-654d-3bcccd019c48\",\n          \"expiracao\": true,\n          \"dataEmissao\": \"2021-07-02T06:12:20.222Z\",\n          \"dataExpiracao\": \"1959-09-18T17:37:05.805Z\",\n          \"codigoCredencial\": \"ullamco est non ex velit\",\n          \"urlCredencial\": \"fugiat\"\n        },\n        {\n          \"nome\": \"magna\",\n          \"organizacaoEmissora\": \"quis sed \",\n          \"id\": \"urn:uuid:806d854b-61f5-0b89-de9d-b866149587be\",\n          \"expiracao\": false,\n          \"dataEmissao\": \"1995-08-10T04:35:22.012Z\",\n          \"dataExpiracao\": \"1963-10-22T04:50:24.083Z\",\n          \"codigoCredencial\": \"elit ex amet dolore sunt\",\n          \"urlCredencial\": \"est proident id deserunt ut\"\n        }\n      ]\n    }\n  ],\n  \"rgNumero\": \"e\",\n  \"id\": \"urn:uuid:e6597f5d-b361-9697-c368-b1b1d2793258\",\n  \"nome\": \"sit\",\n  \"enderecoComplemento\": \"in\",\n  \"telefone\": \"et do\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/candidato/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"candidato",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"cpfEmissor\": \"ut magna\",\n  \"cpfNumero\": \"id dolore occaecat\",\n  \"cpfuf\": \"ea aliquip\",\n  \"emailEndereco\": \"aliqua nulla ea\",\n  \"enderecoBairro\": \"nostrud qui ut adi\",\n  \"enderecoCEP\": \"no\",\n  \"enderecoLogradouro\": \"sit ullamco\",\n  \"especialidades\": [\n    {\n      \"nome\": \"qui ipsum elit\",\n      \"id\": \"be068088-a44c-b55d-0fc1-411d326b5920\",\n      \"certificados\": [\n        {\n          \"nome\": \"incididunt cillum mollit\",\n          \"organizacaoEmissora\": \"sit magna\",\n          \"id\": \"urn:uuid:01967a6b-f18f-694e-f865-f47a64a5c870\",\n          \"expiracao\": false,\n          \"dataEmissao\": \"1996-08-15T07:03:53.295Z\",\n          \"dataExpiracao\": \"2001-12-21T07:44:31.068Z\",\n          \"codigoCredencial\": \"elit velit pariatur sed\",\n          \"urlCredencial\": \"sint Excepteur i\"\n        },\n        {\n          \"nome\": \"dolor magna\",\n          \"organizacaoEmissora\": \"enim\",\n          \"id\": \"450100ac-4fd7-573a-6bed-be7cbda5c747\",\n          \"expiracao\": true,\n          \"dataEmissao\": \"1989-08-12T12:14:37.609Z\",\n          \"dataExpiracao\": \"1949-03-21T15:47:42.635Z\",\n          \"codigoCredencial\": \"Ut ea\",\n          \"urlCredencial\": \"do irure dolore Ut\"\n        }\n      ]\n    },\n    {\n      \"nome\": \"Excepteur elit nostrud\",\n      \"id\": \"urn:uuid:a5454682-1aec-52ee-1894-db01feccca3e\",\n      \"certificados\": [\n        {\n          \"nome\": \"Ut in\",\n          \"organizacaoEmissora\": \"reprehenderit do sed labore\",\n          \"id\": \"urn:uuid:05cb38dc-39f8-cddc-654d-3bcccd019c48\",\n          \"expiracao\": true,\n          \"dataEmissao\": \"2021-07-02T06:12:20.222Z\",\n          \"dataExpiracao\": \"1959-09-18T17:37:05.805Z\",\n          \"codigoCredencial\": \"ullamco est non ex velit\",\n          \"urlCredencial\": \"fugiat\"\n        },\n        {\n          \"nome\": \"magna\",\n          \"organizacaoEmissora\": \"quis sed \",\n          \"id\": \"urn:uuid:806d854b-61f5-0b89-de9d-b866149587be\",\n          \"expiracao\": false,\n          \"dataEmissao\": \"1995-08-10T04:35:22.012Z\",\n          \"dataExpiracao\": \"1963-10-22T04:50:24.083Z\",\n          \"codigoCredencial\": \"elit ex amet dolore sunt\",\n          \"urlCredencial\": \"est proident id deserunt ut\"\n        }\n      ]\n    }\n  ],\n  \"rgNumero\": \"e\",\n  \"id\": \"urn:uuid:e6597f5d-b361-9697-c368-b1b1d2793258\",\n  \"nome\": \"sit\",\n  \"enderecoComplemento\": \"in\",\n  \"telefone\": \"et do\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/candidato/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"candidato",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete Candidato",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/candidato/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"candidato",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "ad sunt dolor Lorem id",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/candidato/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"candidato",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/candidato/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"candidato",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/candidato/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"candidato",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get Candidato",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/candidato",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"candidato"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/candidato",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"candidato"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"cpfEmissor\": \"sit dolor\",\n    \"cpfNumero\": \"sed esse cupidatat ex\",\n    \"cpfuf\": \"amet pariatur\",\n    \"emailEndereco\": \"sit nostru\",\n    \"enderecoBairro\": \"cupidatat et\",\n    \"enderecoCEP\": \"Ex\",\n    \"enderecoLogradouro\": \"ex\",\n    \"especialidades\": [\n      {\n        \"nome\": \"eiusmod sint\",\n        \"id\": \"urn:uuid:85027f86-a676-3ca7-c53d-b4a79c1ee734\",\n        \"certificados\": [\n          {\n            \"nome\": \"consequat officia fugiat Excepteur\",\n            \"organizacaoEmissora\": \"eiusmod officia et\",\n            \"id\": \"urn:uuid:8ce80ed1-1d3e-32b1-4d9e-3df08c42d861\",\n            \"expiracao\": true,\n            \"dataEmissao\": \"2004-11-22T15:43:59.174Z\",\n            \"dataExpiracao\": \"1988-07-19T13:42:14.730Z\",\n            \"codigoCredencial\": \"in elit reprehenderit dolor Duis\",\n            \"urlCredencial\": \"velit dolore\"\n          },\n          {\n            \"nome\": \"proident eu\",\n            \"organizacaoEmissora\": \"mollit ipsum ex labore aute\",\n            \"id\": \"urn:uuid:e3b2b476-99ed-7d91-2d45-0ea64e460d89\",\n            \"expiracao\": false,\n            \"dataEmissao\": \"1993-03-26T02:34:24.095Z\",\n            \"dataExpiracao\": \"1962-09-13T00:13:13.398Z\",\n            \"codigoCredencial\": \"ipsum id\",\n            \"urlCredencial\": \"occaecat consequat\"\n          }\n        ]\n      },\n      {\n        \"nome\": \"cillum ullamco ex\",\n        \"id\": \"f6485416-f5f5-9362-90dd-8d51de5c7562\",\n        \"certificados\": [\n          {\n            \"nome\": \"sunt do\",\n            \"organizacaoEmissora\": \"ullamco\",\n            \"id\": \"urn:uuid:5c199b22-f94b-531d-7f39-1e7196e482ff\",\n            \"expiracao\": false,\n            \"dataEmissao\": \"1962-12-12T09:14:46.171Z\",\n            \"dataExpiracao\": \"1952-03-24T14:44:47.342Z\",\n            \"codigoCredencial\": \"dolore qui\",\n            \"urlCredencial\": \"elit eiu\"\n          },\n          {\n            \"nome\": \"ut Excepteur\",\n            \"organizacaoEmissora\": \"do ad incididunt voluptat\",\n            \"id\": \"2d471b10-32bb-d257-a7ae-8d745f2b57b3\",\n            \"expiracao\": false,\n            \"dataEmissao\": \"1977-07-06T08:32:02.372Z\",\n            \"dataExpiracao\": \"1957-04-12T02:04:27.081Z\",\n            \"codigoCredencial\": \"et\",\n            \"urlCredencial\": \"nostrud quis\"\n          }\n        ]\n      }\n    ],\n    \"rgNumero\": \"do esse aliquip\",\n    \"id\": \"0180cbe7-5597-7eef-68d1-f79aad44637f\",\n    \"nome\": \"consequat anim \",\n    \"enderecoComplemento\": \"in dolore am\",\n    \"telefone\": \"non quis irure et\"\n  },\n  {\n    \"cpfEmissor\": \"labore consectetur veniam\",\n    \"cpfNumero\": \"dolore sed cillum ad\",\n    \"cpfuf\": \"elit pariatur\",\n    \"emailEndereco\": \"ut irure eu id\",\n    \"enderecoBairro\": \"laborum est nisi\",\n    \"enderecoCEP\": \"enim anim ut\",\n    \"enderecoLogradouro\": \"id dolore \",\n    \"especialidades\": [\n      {\n        \"nome\": \"enim in sint\",\n        \"id\": \"urn:uuid:2026e762-fdf6-eec3-074d-9e79736d596c\",\n        \"certificados\": [\n          {\n            \"nome\": \"qui temp\",\n            \"organizacaoEmissora\": \"enim voluptate\",\n            \"id\": \"urn:uuid:ebb35dc9-a93b-1a7c-5e57-195b62d3a2bc\",\n            \"expiracao\": false,\n            \"dataEmissao\": \"2004-05-25T19:02:20.887Z\",\n            \"dataExpiracao\": \"2014-01-17T04:35:02.647Z\",\n            \"codigoCredencial\": \"labore\",\n            \"urlCredencial\": \"ea sint\"\n          },\n          {\n            \"nome\": \"culpa Lorem pariatur\",\n            \"organizacaoEmissora\": \"labore\",\n            \"id\": \"e8ff1b86-80fb-eed8-285b-657810407383\",\n            \"expiracao\": false,\n            \"dataEmissao\": \"1956-12-25T11:16:50.063Z\",\n            \"dataExpiracao\": \"2017-02-09T14:31:07.354Z\",\n            \"codigoCredencial\": \"minim proident\",\n            \"urlCredencial\": \"adipisicing cupidatat laborum aliqua\"\n          }\n        ]\n      },\n      {\n        \"nome\": \"reprehenderit\",\n        \"id\": \"urn:uuid:e890736b-9faa-bc1c-c272-a797cb326888\",\n        \"certificados\": [\n          {\n            \"nome\": \"ali\",\n            \"organizacaoEmissora\": \"ut in\",\n            \"id\": \"18af5a8f-a7ee-910e-b926-39a36e631902\",\n            \"expiracao\": false,\n            \"dataEmissao\": \"2013-06-12T15:18:27.705Z\",\n            \"dataExpiracao\": \"1948-11-22T22:53:04.243Z\",\n            \"codigoCredencial\": \"sit culpa ut\",\n            \"urlCredencial\": \"sit dolor ut\"\n          },\n          {\n            \"nome\": \"voluptate occaecat ex\",\n            \"organizacaoEmissora\": \"sunt est culpa\",\n            \"id\": \"urn:uuid:a1215af7-c435-8bd0-35aa-85fbeba825ed\",\n            \"expiracao\": false,\n            \"dataEmissao\": \"1955-10-24T17:04:51.957Z\",\n            \"dataExpiracao\": \"2004-08-23T09:30:09.076Z\",\n            \"codigoCredencial\": \"adipisicing aute\",\n            \"urlCredencial\": \"e\"\n          }\n        ]\n      }\n    ],\n    \"rgNumero\": \"\",\n    \"id\": \"c247b180-5b15-1787-3810-940bfe56a588\",\n    \"nome\": \"ut pariatu\",\n    \"enderecoComplemento\": \"veniam ut non\",\n    \"telefone\": \"do l\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Post Candidato",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"cpfEmissor\": \"ut magna\",\n  \"cpfNumero\": \"id dolore occaecat\",\n  \"cpfuf\": \"ea aliquip\",\n  \"emailEndereco\": \"aliqua nulla ea\",\n  \"enderecoBairro\": \"nostrud qui ut adi\",\n  \"enderecoCEP\": \"no\",\n  \"enderecoLogradouro\": \"sit ullamco\",\n  \"especialidades\": [\n    {\n      \"nome\": \"qui ipsum elit\",\n      \"id\": \"be068088-a44c-b55d-0fc1-411d326b5920\",\n      \"certificados\": [\n        {\n          \"nome\": \"incididunt cillum mollit\",\n          \"organizacaoEmissora\": \"sit magna\",\n          \"id\": \"urn:uuid:01967a6b-f18f-694e-f865-f47a64a5c870\",\n          \"expiracao\": false,\n          \"dataEmissao\": \"1996-08-15T07:03:53.295Z\",\n          \"dataExpiracao\": \"2001-12-21T07:44:31.068Z\",\n          \"codigoCredencial\": \"elit velit pariatur sed\",\n          \"urlCredencial\": \"sint Excepteur i\"\n        },\n        {\n          \"nome\": \"dolor magna\",\n          \"organizacaoEmissora\": \"enim\",\n          \"id\": \"450100ac-4fd7-573a-6bed-be7cbda5c747\",\n          \"expiracao\": true,\n          \"dataEmissao\": \"1989-08-12T12:14:37.609Z\",\n          \"dataExpiracao\": \"1949-03-21T15:47:42.635Z\",\n          \"codigoCredencial\": \"Ut ea\",\n          \"urlCredencial\": \"do irure dolore Ut\"\n        }\n      ]\n    },\n    {\n      \"nome\": \"Excepteur elit nostrud\",\n      \"id\": \"urn:uuid:a5454682-1aec-52ee-1894-db01feccca3e\",\n      \"certificados\": [\n        {\n          \"nome\": \"Ut in\",\n          \"organizacaoEmissora\": \"reprehenderit do sed labore\",\n          \"id\": \"urn:uuid:05cb38dc-39f8-cddc-654d-3bcccd019c48\",\n          \"expiracao\": true,\n          \"dataEmissao\": \"2021-07-02T06:12:20.222Z\",\n          \"dataExpiracao\": \"1959-09-18T17:37:05.805Z\",\n          \"codigoCredencial\": \"ullamco est non ex velit\",\n          \"urlCredencial\": \"fugiat\"\n        },\n        {\n          \"nome\": \"magna\",\n          \"organizacaoEmissora\": \"quis sed \",\n          \"id\": \"urn:uuid:806d854b-61f5-0b89-de9d-b866149587be\",\n          \"expiracao\": false,\n          \"dataEmissao\": \"1995-08-10T04:35:22.012Z\",\n          \"dataExpiracao\": \"1963-10-22T04:50:24.083Z\",\n          \"codigoCredencial\": \"elit ex amet dolore sunt\",\n          \"urlCredencial\": \"est proident id deserunt ut\"\n        }\n      ]\n    }\n  ],\n  \"rgNumero\": \"e\",\n  \"id\": \"urn:uuid:e6597f5d-b361-9697-c368-b1b1d2793258\",\n  \"nome\": \"sit\",\n  \"enderecoComplemento\": \"in\",\n  \"telefone\": \"et do\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/candidato",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"candidato"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"cpfEmissor\": \"ut magna\",\n  \"cpfNumero\": \"id dolore occaecat\",\n  \"cpfuf\": \"ea aliquip\",\n  \"emailEndereco\": \"aliqua nulla ea\",\n  \"enderecoBairro\": \"nostrud qui ut adi\",\n  \"enderecoCEP\": \"no\",\n  \"enderecoLogradouro\": \"sit ullamco\",\n  \"especialidades\": [\n    {\n      \"nome\": \"qui ipsum elit\",\n      \"id\": \"be068088-a44c-b55d-0fc1-411d326b5920\",\n      \"certificados\": [\n        {\n          \"nome\": \"incididunt cillum mollit\",\n          \"organizacaoEmissora\": \"sit magna\",\n          \"id\": \"urn:uuid:01967a6b-f18f-694e-f865-f47a64a5c870\",\n          \"expiracao\": false,\n          \"dataEmissao\": \"1996-08-15T07:03:53.295Z\",\n          \"dataExpiracao\": \"2001-12-21T07:44:31.068Z\",\n          \"codigoCredencial\": \"elit velit pariatur sed\",\n          \"urlCredencial\": \"sint Excepteur i\"\n        },\n        {\n          \"nome\": \"dolor magna\",\n          \"organizacaoEmissora\": \"enim\",\n          \"id\": \"450100ac-4fd7-573a-6bed-be7cbda5c747\",\n          \"expiracao\": true,\n          \"dataEmissao\": \"1989-08-12T12:14:37.609Z\",\n          \"dataExpiracao\": \"1949-03-21T15:47:42.635Z\",\n          \"codigoCredencial\": \"Ut ea\",\n          \"urlCredencial\": \"do irure dolore Ut\"\n        }\n      ]\n    },\n    {\n      \"nome\": \"Excepteur elit nostrud\",\n      \"id\": \"urn:uuid:a5454682-1aec-52ee-1894-db01feccca3e\",\n      \"certificados\": [\n        {\n          \"nome\": \"Ut in\",\n          \"organizacaoEmissora\": \"reprehenderit do sed labore\",\n          \"id\": \"urn:uuid:05cb38dc-39f8-cddc-654d-3bcccd019c48\",\n          \"expiracao\": true,\n          \"dataEmissao\": \"2021-07-02T06:12:20.222Z\",\n          \"dataExpiracao\": \"1959-09-18T17:37:05.805Z\",\n          \"codigoCredencial\": \"ullamco est non ex velit\",\n          \"urlCredencial\": \"fugiat\"\n        },\n        {\n          \"nome\": \"magna\",\n          \"organizacaoEmissora\": \"quis sed \",\n          \"id\": \"urn:uuid:806d854b-61f5-0b89-de9d-b866149587be\",\n          \"expiracao\": false,\n          \"dataEmissao\": \"1995-08-10T04:35:22.012Z\",\n          \"dataExpiracao\": \"1963-10-22T04:50:24.083Z\",\n          \"codigoCredencial\": \"elit ex amet dolore sunt\",\n          \"urlCredencial\": \"est proident id deserunt ut\"\n        }\n      ]\n    }\n  ],\n  \"rgNumero\": \"e\",\n  \"id\": \"urn:uuid:e6597f5d-b361-9697-c368-b1b1d2793258\",\n  \"nome\": \"sit\",\n  \"enderecoComplemento\": \"in\",\n  \"telefone\": \"et do\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/candidato",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"candidato"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"cpfEmissor\": \"ut magna\",\n  \"cpfNumero\": \"id dolore occaecat\",\n  \"cpfuf\": \"ea aliquip\",\n  \"emailEndereco\": \"aliqua nulla ea\",\n  \"enderecoBairro\": \"nostrud qui ut adi\",\n  \"enderecoCEP\": \"no\",\n  \"enderecoLogradouro\": \"sit ullamco\",\n  \"especialidades\": [\n    {\n      \"nome\": \"qui ipsum elit\",\n      \"id\": \"be068088-a44c-b55d-0fc1-411d326b5920\",\n      \"certificados\": [\n        {\n          \"nome\": \"incididunt cillum mollit\",\n          \"organizacaoEmissora\": \"sit magna\",\n          \"id\": \"urn:uuid:01967a6b-f18f-694e-f865-f47a64a5c870\",\n          \"expiracao\": false,\n          \"dataEmissao\": \"1996-08-15T07:03:53.295Z\",\n          \"dataExpiracao\": \"2001-12-21T07:44:31.068Z\",\n          \"codigoCredencial\": \"elit velit pariatur sed\",\n          \"urlCredencial\": \"sint Excepteur i\"\n        },\n        {\n          \"nome\": \"dolor magna\",\n          \"organizacaoEmissora\": \"enim\",\n          \"id\": \"450100ac-4fd7-573a-6bed-be7cbda5c747\",\n          \"expiracao\": true,\n          \"dataEmissao\": \"1989-08-12T12:14:37.609Z\",\n          \"dataExpiracao\": \"1949-03-21T15:47:42.635Z\",\n          \"codigoCredencial\": \"Ut ea\",\n          \"urlCredencial\": \"do irure dolore Ut\"\n        }\n      ]\n    },\n    {\n      \"nome\": \"Excepteur elit nostrud\",\n      \"id\": \"urn:uuid:a5454682-1aec-52ee-1894-db01feccca3e\",\n      \"certificados\": [\n        {\n          \"nome\": \"Ut in\",\n          \"organizacaoEmissora\": \"reprehenderit do sed labore\",\n          \"id\": \"urn:uuid:05cb38dc-39f8-cddc-654d-3bcccd019c48\",\n          \"expiracao\": true,\n          \"dataEmissao\": \"2021-07-02T06:12:20.222Z\",\n          \"dataExpiracao\": \"1959-09-18T17:37:05.805Z\",\n          \"codigoCredencial\": \"ullamco est non ex velit\",\n          \"urlCredencial\": \"fugiat\"\n        },\n        {\n          \"nome\": \"magna\",\n          \"organizacaoEmissora\": \"quis sed \",\n          \"id\": \"urn:uuid:806d854b-61f5-0b89-de9d-b866149587be\",\n          \"expiracao\": false,\n          \"dataEmissao\": \"1995-08-10T04:35:22.012Z\",\n          \"dataExpiracao\": \"1963-10-22T04:50:24.083Z\",\n          \"codigoCredencial\": \"elit ex amet dolore sunt\",\n          \"urlCredencial\": \"est proident id deserunt ut\"\n        }\n      ]\n    }\n  ],\n  \"rgNumero\": \"e\",\n  \"id\": \"urn:uuid:e6597f5d-b361-9697-c368-b1b1d2793258\",\n  \"nome\": \"sit\",\n  \"enderecoComplemento\": \"in\",\n  \"telefone\": \"et do\"\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"cpfEmissor\": \"ut magna\",\n  \"cpfNumero\": \"id dolore occaecat\",\n  \"cpfuf\": \"ea aliquip\",\n  \"emailEndereco\": \"aliqua nulla ea\",\n  \"enderecoBairro\": \"nostrud qui ut adi\",\n  \"enderecoCEP\": \"no\",\n  \"enderecoLogradouro\": \"sit ullamco\",\n  \"especialidades\": [\n    {\n      \"nome\": \"qui ipsum elit\",\n      \"id\": \"be068088-a44c-b55d-0fc1-411d326b5920\",\n      \"certificados\": [\n        {\n          \"nome\": \"incididunt cillum mollit\",\n          \"organizacaoEmissora\": \"sit magna\",\n          \"id\": \"urn:uuid:01967a6b-f18f-694e-f865-f47a64a5c870\",\n          \"expiracao\": false,\n          \"dataEmissao\": \"1996-08-15T07:03:53.295Z\",\n          \"dataExpiracao\": \"2001-12-21T07:44:31.068Z\",\n          \"codigoCredencial\": \"elit velit pariatur sed\",\n          \"urlCredencial\": \"sint Excepteur i\"\n        },\n        {\n          \"nome\": \"dolor magna\",\n          \"organizacaoEmissora\": \"enim\",\n          \"id\": \"450100ac-4fd7-573a-6bed-be7cbda5c747\",\n          \"expiracao\": true,\n          \"dataEmissao\": \"1989-08-12T12:14:37.609Z\",\n          \"dataExpiracao\": \"1949-03-21T15:47:42.635Z\",\n          \"codigoCredencial\": \"Ut ea\",\n          \"urlCredencial\": \"do irure dolore Ut\"\n        }\n      ]\n    },\n    {\n      \"nome\": \"Excepteur elit nostrud\",\n      \"id\": \"urn:uuid:a5454682-1aec-52ee-1894-db01feccca3e\",\n      \"certificados\": [\n        {\n          \"nome\": \"Ut in\",\n          \"organizacaoEmissora\": \"reprehenderit do sed labore\",\n          \"id\": \"urn:uuid:05cb38dc-39f8-cddc-654d-3bcccd019c48\",\n          \"expiracao\": true,\n          \"dataEmissao\": \"2021-07-02T06:12:20.222Z\",\n          \"dataExpiracao\": \"1959-09-18T17:37:05.805Z\",\n          \"codigoCredencial\": \"ullamco est non ex velit\",\n          \"urlCredencial\": \"fugiat\"\n        },\n        {\n          \"nome\": \"magna\",\n          \"organizacaoEmissora\": \"quis sed \",\n          \"id\": \"urn:uuid:806d854b-61f5-0b89-de9d-b866149587be\",\n          \"expiracao\": false,\n          \"dataEmissao\": \"1995-08-10T04:35:22.012Z\",\n          \"dataExpiracao\": \"1963-10-22T04:50:24.083Z\",\n          \"codigoCredencial\": \"elit ex amet dolore sunt\",\n          \"urlCredencial\": \"est proident id deserunt ut\"\n        }\n      ]\n    }\n  ],\n  \"rgNumero\": \"e\",\n  \"id\": \"urn:uuid:e6597f5d-b361-9697-c368-b1b1d2793258\",\n  \"nome\": \"sit\",\n  \"enderecoComplemento\": \"in\",\n  \"telefone\": \"et do\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/candidato",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"candidato"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Find Candidato",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/candidato/find?page=0&query=java,net",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"candidato",
+								"find"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0",
+									"description": "(Required) "
+								},
+								{
+									"key": "query",
+									"value": "java,net",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/candidato/find?page=14450214&query=ad sunt dolor Lorem id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"candidato",
+										"find"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "14450214"
+										},
+										{
+											"key": "query",
+											"value": "ad sunt dolor Lorem id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"cpfEmissor\": \"officia occaecat in\",\n    \"cpfNumero\": \"consequat ex ad in deserunt\",\n    \"cpfuf\": \"fugiat anim nostrud\",\n    \"emailEndereco\": \"minim in esse cupidatat\",\n    \"enderecoBairro\": \"tempor Ut ut\",\n    \"enderecoCEP\": \"occaecat Duis Excepteur tempor commodo\",\n    \"enderecoLogradouro\": \"proident dolor elit tempor do\",\n    \"especialidades\": [\n      {\n        \"nome\": \"quis Duis\",\n        \"id\": \"urn:uuid:ab109017-a4c2-ff77-8230-b7153e03edbf\",\n        \"certificados\": [\n          {\n            \"nome\": \"veniam quis\",\n            \"organizacaoEmissora\": \"dolore Duis voluptate reprehenderit ea\",\n            \"id\": \"urn:uuid:26259419-20de-bd7d-4097-88264161c0ab\",\n            \"expiracao\": false,\n            \"dataEmissao\": \"1951-12-23T05:12:47.213Z\",\n            \"dataExpiracao\": \"1991-01-25T05:57:37.283Z\",\n            \"codigoCredencial\": \"Excepteur\",\n            \"urlCredencial\": \"culpa in exercitation aliquip in\"\n          },\n          {\n            \"nome\": \"id qui proident dolor\",\n            \"organizacaoEmissora\": \"et sunt\",\n            \"id\": \"8a954f1f-f466-b694-6f7e-7d86de826b56\",\n            \"expiracao\": true,\n            \"dataEmissao\": \"1955-12-31T06:55:03.297Z\",\n            \"dataExpiracao\": \"1956-01-03T13:58:01.003Z\",\n            \"codigoCredencial\": \"laboris laborum magn\",\n            \"urlCredencial\": \"velit eu\"\n          }\n        ]\n      },\n      {\n        \"nome\": \"velit occaecat qui\",\n        \"id\": \"urn:uuid:2d5fd721-2a2c-849d-15de-e41589998723\",\n        \"certificados\": [\n          {\n            \"nome\": \"consectetur offici\",\n            \"organizacaoEmissora\": \"v\",\n            \"id\": \"4ef094f8-034e-1aaa-d2f7-73fe9b60148d\",\n            \"expiracao\": true,\n            \"dataEmissao\": \"1988-10-28T15:27:32.106Z\",\n            \"dataExpiracao\": \"1961-11-09T15:42:18.650Z\",\n            \"codigoCredencial\": \"tempor ad Duis\",\n            \"urlCredencial\": \"ipsum ullamco cupidatat irure adipisicing\"\n          },\n          {\n            \"nome\": \"cillum Ut\",\n            \"organizacaoEmissora\": \"officia adipisicing nulla\",\n            \"id\": \"8e1f84bf-3150-c4ca-634d-f35ff88ebaaa\",\n            \"expiracao\": true,\n            \"dataEmissao\": \"1976-08-09T11:54:07.495Z\",\n            \"dataExpiracao\": \"2019-02-02T23:43:56.836Z\",\n            \"codigoCredencial\": \"consectetur mollit eiusmod laborum\",\n            \"urlCredencial\": \"mollit anim consequat enim\"\n          }\n        ]\n      }\n    ],\n    \"rgNumero\": \"in\",\n    \"id\": \"urn:uuid:4e35b873-bc10-278a-f504-ac69bca89d63\",\n    \"nome\": \"in \",\n    \"enderecoComplemento\": \"aliquip ut\",\n    \"telefone\": \"veniam anim\"\n  },\n  {\n    \"cpfEmissor\": \"non deserunt\",\n    \"cpfNumero\": \"ex Duis minim\",\n    \"cpfuf\": \"ut Excepteur id commodo Duis\",\n    \"emailEndereco\": \"in ut sint in\",\n    \"enderecoBairro\": \"enim sit mollit\",\n    \"enderecoCEP\": \"quis ipsum est\",\n    \"enderecoLogradouro\": \"amet\",\n    \"especialidades\": [\n      {\n        \"nome\": \"\",\n        \"id\": \"urn:uuid:4116dc96-b06e-a795-8af9-18214a230446\",\n        \"certificados\": [\n          {\n            \"nome\": \"qui cupidatat\",\n            \"organizacaoEmissora\": \"velit\",\n            \"id\": \"urn:uuid:d09bfd3f-77e6-18ad-5b5e-3ddde3dee24e\",\n            \"expiracao\": true,\n            \"dataEmissao\": \"1962-02-18T12:38:29.810Z\",\n            \"dataExpiracao\": \"2010-05-15T15:58:33.847Z\",\n            \"codigoCredencial\": \"ullamco mollit dolore\",\n            \"urlCredencial\": \"est consectetur enim in\"\n          },\n          {\n            \"nome\": \"ullamco et\",\n            \"organizacaoEmissora\": \"pariatur et anim c\",\n            \"id\": \"8b1388bc-6480-4d4c-f682-b0331adcdb93\",\n            \"expiracao\": true,\n            \"dataEmissao\": \"2016-09-11T10:20:14.286Z\",\n            \"dataExpiracao\": \"1989-12-26T16:08:21.640Z\",\n            \"codigoCredencial\": \"ad incididunt laborum laboris\",\n            \"urlCredencial\": \"consectetur minim Duis cillum\"\n          }\n        ]\n      },\n      {\n        \"nome\": \"occaecat\",\n        \"id\": \"0a5d36d5-d832-60ab-d391-c62841d4cb74\",\n        \"certificados\": [\n          {\n            \"nome\": \"Ut\",\n            \"organizacaoEmissora\": \"amet exercitation sed eiusmod adipisicing\",\n            \"id\": \"urn:uuid:55488377-4a50-a655-645f-96ce249bc1eb\",\n            \"expiracao\": false,\n            \"dataEmissao\": \"2003-08-11T23:47:37.554Z\",\n            \"dataExpiracao\": \"1970-06-20T15:56:21.478Z\",\n            \"codigoCredencial\": \"consectetur eu voluptate\",\n            \"urlCredencial\": \"sed enim ut Duis\"\n          },\n          {\n            \"nome\": \"deserunt\",\n            \"organizacaoEmissora\": \"eu ex nisi et\",\n            \"id\": \"2f6391e0-93c9-1c06-207e-74e5934ae0e3\",\n            \"expiracao\": false,\n            \"dataEmissao\": \"1995-05-15T18:33:41.661Z\",\n            \"dataExpiracao\": \"1995-03-19T10:29:31.929Z\",\n            \"codigoCredencial\": \"exercitation ad quis\",\n            \"urlCredencial\": \"aliquip minim quis eiusmod\"\n          }\n        ]\n      }\n    ],\n    \"rgNumero\": \"fugiat voluptate anim\",\n    \"id\": \"urn:uuid:5acc8947-f8e0-0cd3-a6dc-6e7209df996d\",\n    \"nome\": \"ut\",\n    \"enderecoComplemento\": \"irure est in qui tempor\",\n    \"telefone\": \"est ullamco ad nostrud\"\n  }\n]"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/candidato/find?page=14450214&query=ad sunt dolor Lorem id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"candidato",
+										"find"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "14450214"
+										},
+										{
+											"key": "query",
+											"value": "ad sunt dolor Lorem id"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Inserindo Candidato 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Candidato 1\",\r\n    \"cpfNumero\": \"167.222.500-08\",\r\n    \"cpfEmissor\": \"SSP\",\r\n    \"cpfuf\": \"SP\",\r\n    \"emailEndereco\": \"mail@mail.com\",\r\n    \"enderecoLogradouro\": \"Rua Balamb Garden\",\r\n    \"enderecoComplemento\": \"103\",\r\n    \"enderecoBairro\": \"Balamb\",\r\n    \"enderecoCEP\": \"13025-971\",\r\n    \"rgNumero\": \"46.589.241-3\",\r\n    \"telefone\": \"988887777\",\r\n    \"especialidades\": [\r\n        {\r\n            \"nome\": \"Java\",\r\n            \"certificados\": [\r\n                {\r\n                    \"nome\": \"Java Certification\",\r\n                    \"organizacaoEmissora\": \"Oracle\",\r\n                    \"expiracao\": false,\r\n                    \"dataEmissao\": \"2022-01-16T13:36:17.539Z\",\r\n                    \"dataExpiracao\": \"2027-01-16T16:35:12.858Z\",\r\n                    \"codigoCredencial\": \"SJHIXZbysbca5s7\",\r\n                    \"urlCredencial\": \"url\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"nome\": \".Net\",\r\n            \"certificados\": [\r\n                {\r\n                    \"nome\": \"AZ 204 Developer\",\r\n                    \"organizacaoEmissora\": \"Microsoft\",\r\n                    \"expiracao\": true,\r\n                    \"dataEmissao\": \"2022-01-16T13:36:17.539Z\",\r\n                    \"dataExpiracao\": \"2027-01-16T16:35:12.858Z\",\r\n                    \"codigoCredencial\": \"SJHIXZbysbca5s7\",\r\n                    \"urlCredencial\": \"url\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/candidato",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"candidato"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserindo Candidato 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Candidato 2\",\r\n    \"cpfNumero\": \"167.222.500-08\",\r\n    \"cpfEmissor\": \"SSP\",\r\n    \"cpfuf\": \"SP\",\r\n    \"emailEndereco\": \"mail@mail.com\",\r\n    \"enderecoLogradouro\": \"Rua Balamb Garden\",\r\n    \"enderecoComplemento\": \"103\",\r\n    \"enderecoBairro\": \"Balamb\",\r\n    \"enderecoCEP\": \"13025-971\",\r\n    \"rgNumero\": \"46.589.241-3\",\r\n    \"telefone\": \"988887777\",\r\n    \"especialidades\": [\r\n        {\r\n            \"nome\": \"Java\",\r\n            \"certificados\": [\r\n                {\r\n                    \"nome\": \"Java Certification\",\r\n                    \"organizacaoEmissora\": \"Oracle\",\r\n                    \"expiracao\": false,\r\n                    \"dataEmissao\": \"2022-01-16T13:36:17.539Z\",\r\n                    \"dataExpiracao\": \"2027-01-16T16:35:12.858Z\",\r\n                    \"codigoCredencial\": \"SJHIXZbysbca5s7\",\r\n                    \"urlCredencial\": \"url\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"nome\": \".Net\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/candidato",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"candidato"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserindo Candidato 3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Candidato 3\",\r\n    \"cpfNumero\": \"167.222.500-08\",\r\n    \"cpfEmissor\": \"SSP\",\r\n    \"cpfuf\": \"SP\",\r\n    \"emailEndereco\": \"mail@mail.com\",\r\n    \"enderecoLogradouro\": \"Rua Balamb Garden\",\r\n    \"enderecoComplemento\": \"103\",\r\n    \"enderecoBairro\": \"Balamb\",\r\n    \"enderecoCEP\": \"13025-971\",\r\n    \"rgNumero\": \"46.589.241-3\",\r\n    \"telefone\": \"988887777\",\r\n    \"especialidades\": [\r\n        {\r\n            \"nome\": \"Java\",\r\n            \"certificados\": [\r\n                {\r\n                    \"nome\": \"Java Certification\",\r\n                    \"organizacaoEmissora\": \"Oracle\",\r\n                    \"expiracao\": false,\r\n                    \"dataEmissao\": \"2022-01-16T13:36:17.539Z\",\r\n                    \"dataExpiracao\": \"2027-01-16T16:35:12.858Z\",\r\n                    \"codigoCredencial\": \"SJHIXZbysbca5s7\",\r\n                    \"urlCredencial\": \"url\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/candidato",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"candidato"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserindo Candidato 4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Candidato 4\",\r\n    \"cpfNumero\": \"167.222.500-08\",\r\n    \"cpfEmissor\": \"SSP\",\r\n    \"cpfuf\": \"SP\",\r\n    \"emailEndereco\": \"mail@mail.com\",\r\n    \"enderecoLogradouro\": \"Rua Balamb Garden\",\r\n    \"enderecoComplemento\": \"103\",\r\n    \"enderecoBairro\": \"Balamb\",\r\n    \"enderecoCEP\": \"13025-971\",\r\n    \"rgNumero\": \"46.589.241-3\",\r\n    \"telefone\": \"988887777\",\r\n    \"especialidades\": [\r\n        {\r\n            \"nome\": \".Net\",\r\n            \"certificados\": [\r\n                {\r\n                    \"nome\": \"AZ 204 Developer\",\r\n                    \"organizacaoEmissora\": \"Microsoft\",\r\n                    \"expiracao\": true,\r\n                    \"dataEmissao\": \"2022-01-16T13:36:17.539Z\",\r\n                    \"dataExpiracao\": \"2027-01-16T16:35:12.858Z\",\r\n                    \"codigoCredencial\": \"SJHIXZbysbca5s7\",\r\n                    \"urlCredencial\": \"url\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/candidato",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"candidato"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserindo Candidato 5",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Candidato 5\",\r\n    \"cpfNumero\": \"167.222.500-08\",\r\n    \"cpfEmissor\": \"SSP\",\r\n    \"cpfuf\": \"SP\",\r\n    \"emailEndereco\": \"mail@mail.com\",\r\n    \"enderecoLogradouro\": \"Rua Balamb Garden\",\r\n    \"enderecoComplemento\": \"103\",\r\n    \"enderecoBairro\": \"Balamb\",\r\n    \"enderecoCEP\": \"13025-971\",\r\n    \"rgNumero\": \"46.589.241-3\",\r\n    \"telefone\": \"988887777\",\r\n    \"especialidades\": [\r\n        {\r\n            \"nome\": \"Java\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/candidato",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"candidato"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserindo Candidato 6",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Candidato 6\",\r\n    \"cpfNumero\": \"167.222.500-08\",\r\n    \"cpfEmissor\": \"SSP\",\r\n    \"cpfuf\": \"SP\",\r\n    \"emailEndereco\": \"mail@mail.com\",\r\n    \"enderecoLogradouro\": \"Rua Balamb Garden\",\r\n    \"enderecoComplemento\": \"103\",\r\n    \"enderecoBairro\": \"Balamb\",\r\n    \"enderecoCEP\": \"13025-971\",\r\n    \"rgNumero\": \"46.589.241-3\",\r\n    \"telefone\": \"988887777\",\r\n    \"especialidades\": [\r\n        {\r\n            \"nome\": \".Net\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/candidato",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"candidato"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserindo Candidato 7",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Candidato 7\",\r\n    \"cpfNumero\": \"167.222.500-08\",\r\n    \"cpfEmissor\": \"SSP\",\r\n    \"cpfuf\": \"SP\",\r\n    \"emailEndereco\": \"mail@mail.com\",\r\n    \"enderecoLogradouro\": \"Rua Balamb Garden\",\r\n    \"enderecoComplemento\": \"103\",\r\n    \"enderecoBairro\": \"Balamb\",\r\n    \"enderecoCEP\": \"13025-971\",\r\n    \"rgNumero\": \"46.589.241-3\",\r\n    \"telefone\": \"988887777\",\r\n    \"especialidades\": [\r\n        {\r\n            \"nome\": \".Net\",\r\n            \"certificados\": [\r\n                {\r\n                    \"nome\": \"AZ 204 Developer\",\r\n                    \"organizacaoEmissora\": \"Microsoft\",\r\n                    \"expiracao\": true,\r\n                    \"dataEmissao\": \"2022-01-16T13:36:17.539Z\",\r\n                    \"dataExpiracao\": \"2027-01-16T16:35:12.858Z\",\r\n                    \"codigoCredencial\": \"SJHIXZbysbca5s7\",\r\n                    \"urlCredencial\": \"url\"\r\n                },\r\n                {\r\n                    \"nome\": \"AZ 900\",\r\n                    \"organizacaoEmissora\": \"Microsoft\",\r\n                    \"expiracao\": true,\r\n                    \"dataEmissao\": \"2022-01-16T13:36:17.539Z\",\r\n                    \"dataExpiracao\": \"2027-01-16T16:35:12.858Z\",\r\n                    \"codigoCredencial\": \"SJHIXZbysbca5s7\",\r\n                    \"urlCredencial\": \"url\"\r\n                },\r\n                {\r\n                    \"nome\": \"AZ 304 Architecture\",\r\n                    \"organizacaoEmissora\": \"Microsoft\",\r\n                    \"expiracao\": true,\r\n                    \"dataEmissao\": \"2022-01-16T13:36:17.539Z\",\r\n                    \"dataExpiracao\": \"2027-01-16T16:35:12.858Z\",\r\n                    \"codigoCredencial\": \"SJHIXZbysbca5s7\",\r\n                    \"urlCredencial\": \"url\"\r\n                },\r\n                {\r\n                    \"nome\": \"AZ 305 Cloud Architecture\",\r\n                    \"organizacaoEmissora\": \"Microsoft\",\r\n                    \"expiracao\": true,\r\n                    \"dataEmissao\": \"2022-01-16T13:36:17.539Z\",\r\n                    \"dataExpiracao\": \"2027-01-16T16:35:12.858Z\",\r\n                    \"codigoCredencial\": \"SJHIXZbysbca5s7\",\r\n                    \"urlCredencial\": \"url\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/candidato",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"candidato"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "certificado",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Get Certificado By Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/certificado/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"certificado",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "ad sunt dolor Lorem id",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/certificado/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"certificado",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"nome\": \"dolo\",\n  \"organizacaoEmissora\": \"pariatur tempor\",\n  \"id\": \"46d12752-c8e1-cb98-fe9f-2a56ef56070e\",\n  \"expiracao\": true,\n  \"dataEmissao\": \"2008-04-02T06:37:11.916Z\",\n  \"dataExpiracao\": \"2007-08-23T22:03:07.444Z\",\n  \"codigoCredencial\": \"id labore\",\n  \"urlCredencial\": \"aliqua reprehenderit officia deserunt\"\n}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/certificado/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"certificado",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Put Certificado",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"dolo\",\n  \"organizacaoEmissora\": \"pariatur tempor\",\n  \"id\": \"46d12752-c8e1-cb98-fe9f-2a56ef56070e\",\n  \"expiracao\": true,\n  \"dataEmissao\": \"2008-04-02T06:37:11.916Z\",\n  \"dataExpiracao\": \"2007-08-23T22:03:07.444Z\",\n  \"codigoCredencial\": \"id labore\",\n  \"urlCredencial\": \"aliqua reprehenderit officia deserunt\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/certificado/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"certificado",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "ad sunt dolor Lorem id",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"dolo\",\n  \"organizacaoEmissora\": \"pariatur tempor\",\n  \"id\": \"46d12752-c8e1-cb98-fe9f-2a56ef56070e\",\n  \"expiracao\": true,\n  \"dataEmissao\": \"2008-04-02T06:37:11.916Z\",\n  \"dataExpiracao\": \"2007-08-23T22:03:07.444Z\",\n  \"codigoCredencial\": \"id labore\",\n  \"urlCredencial\": \"aliqua reprehenderit officia deserunt\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/certificado/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"certificado",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"dolo\",\n  \"organizacaoEmissora\": \"pariatur tempor\",\n  \"id\": \"46d12752-c8e1-cb98-fe9f-2a56ef56070e\",\n  \"expiracao\": true,\n  \"dataEmissao\": \"2008-04-02T06:37:11.916Z\",\n  \"dataExpiracao\": \"2007-08-23T22:03:07.444Z\",\n  \"codigoCredencial\": \"id labore\",\n  \"urlCredencial\": \"aliqua reprehenderit officia deserunt\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/certificado/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"certificado",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete Certificado",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/certificado/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"certificado",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "ad sunt dolor Lorem id",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/certificado/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"certificado",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/certificado/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"certificado",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/certificado/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"certificado",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get Certificado",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/certificado",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"certificado"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/certificado",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"certificado"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"nome\": \"deserunt officia in\",\n    \"organizacaoEmissora\": \"nulla ullamco tempor conse\",\n    \"id\": \"8bbd7a4d-b09a-fd01-9a1f-5b9c0c16bc14\",\n    \"expiracao\": true,\n    \"dataEmissao\": \"1990-12-16T20:15:44.472Z\",\n    \"dataExpiracao\": \"2006-02-17T05:15:55.564Z\",\n    \"codigoCredencial\": \"labor\",\n    \"urlCredencial\": \"dolore cillum\"\n  },\n  {\n    \"nome\": \"sed\",\n    \"organizacaoEmissora\": \"ipsum\",\n    \"id\": \"9e18f944-3a52-1739-65e9-aca55d37815e\",\n    \"expiracao\": true,\n    \"dataEmissao\": \"2014-10-26T08:05:10.764Z\",\n    \"dataExpiracao\": \"1956-01-31T20:30:36.782Z\",\n    \"codigoCredencial\": \"amet irure ipsum in velit\",\n    \"urlCredencial\": \"ea Excepteur commodo\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Post Certificado",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"dolo\",\n  \"organizacaoEmissora\": \"pariatur tempor\",\n  \"id\": \"46d12752-c8e1-cb98-fe9f-2a56ef56070e\",\n  \"expiracao\": true,\n  \"dataEmissao\": \"2008-04-02T06:37:11.916Z\",\n  \"dataExpiracao\": \"2007-08-23T22:03:07.444Z\",\n  \"codigoCredencial\": \"id labore\",\n  \"urlCredencial\": \"aliqua reprehenderit officia deserunt\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/certificado",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"certificado"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"dolo\",\n  \"organizacaoEmissora\": \"pariatur tempor\",\n  \"id\": \"46d12752-c8e1-cb98-fe9f-2a56ef56070e\",\n  \"expiracao\": true,\n  \"dataEmissao\": \"2008-04-02T06:37:11.916Z\",\n  \"dataExpiracao\": \"2007-08-23T22:03:07.444Z\",\n  \"codigoCredencial\": \"id labore\",\n  \"urlCredencial\": \"aliqua reprehenderit officia deserunt\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/certificado",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"certificado"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"nome\": \"dolo\",\n  \"organizacaoEmissora\": \"pariatur tempor\",\n  \"id\": \"46d12752-c8e1-cb98-fe9f-2a56ef56070e\",\n  \"expiracao\": true,\n  \"dataEmissao\": \"2008-04-02T06:37:11.916Z\",\n  \"dataExpiracao\": \"2007-08-23T22:03:07.444Z\",\n  \"codigoCredencial\": \"id labore\",\n  \"urlCredencial\": \"aliqua reprehenderit officia deserunt\"\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"dolo\",\n  \"organizacaoEmissora\": \"pariatur tempor\",\n  \"id\": \"46d12752-c8e1-cb98-fe9f-2a56ef56070e\",\n  \"expiracao\": true,\n  \"dataEmissao\": \"2008-04-02T06:37:11.916Z\",\n  \"dataExpiracao\": \"2007-08-23T22:03:07.444Z\",\n  \"codigoCredencial\": \"id labore\",\n  \"urlCredencial\": \"aliqua reprehenderit officia deserunt\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/certificado",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"certificado"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "especialidade",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Get Especialidade By Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/especialidade/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"especialidade",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "ad sunt dolor Lorem id",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/especialidade/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"especialidade",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"nome\": \"in aliqua do\",\n  \"id\": \"urn:uuid:b3eb6af4-4acd-fce0-c3ba-bcf2c60ba09a\",\n  \"certificados\": [\n    {\n      \"nome\": \"incididunt aliquip\",\n      \"organizacaoEmissora\": \"proident incididunt\",\n      \"id\": \"37e04867-3440-da84-15ac-2e8895d656e9\",\n      \"expiracao\": true,\n      \"dataEmissao\": \"1983-08-30T14:31:14.003Z\",\n      \"dataExpiracao\": \"1964-03-23T01:28:02.284Z\",\n      \"codigoCredencial\": \"dolor amet quis deserunt\",\n      \"urlCredencial\": \"eiusmod ex\"\n    },\n    {\n      \"nome\": \"consectetur do anim\",\n      \"organizacaoEmissora\": \"adipisicing elit\",\n      \"id\": \"33e43594-e817-0823-81e0-cae76b842f42\",\n      \"expiracao\": true,\n      \"dataEmissao\": \"1991-08-26T16:21:38.488Z\",\n      \"dataExpiracao\": \"1995-12-21T13:11:41.787Z\",\n      \"codigoCredencial\": \"laboris Duis cillum\",\n      \"urlCredencial\": \"ex sed eiusmod consequat\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/especialidade/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"especialidade",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Put Especialidade",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"in aliqua do\",\n  \"id\": \"urn:uuid:b3eb6af4-4acd-fce0-c3ba-bcf2c60ba09a\",\n  \"certificados\": [\n    {\n      \"nome\": \"incididunt aliquip\",\n      \"organizacaoEmissora\": \"proident incididunt\",\n      \"id\": \"37e04867-3440-da84-15ac-2e8895d656e9\",\n      \"expiracao\": true,\n      \"dataEmissao\": \"1983-08-30T14:31:14.003Z\",\n      \"dataExpiracao\": \"1964-03-23T01:28:02.284Z\",\n      \"codigoCredencial\": \"dolor amet quis deserunt\",\n      \"urlCredencial\": \"eiusmod ex\"\n    },\n    {\n      \"nome\": \"consectetur do anim\",\n      \"organizacaoEmissora\": \"adipisicing elit\",\n      \"id\": \"33e43594-e817-0823-81e0-cae76b842f42\",\n      \"expiracao\": true,\n      \"dataEmissao\": \"1991-08-26T16:21:38.488Z\",\n      \"dataExpiracao\": \"1995-12-21T13:11:41.787Z\",\n      \"codigoCredencial\": \"laboris Duis cillum\",\n      \"urlCredencial\": \"ex sed eiusmod consequat\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/especialidade/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"especialidade",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "ad sunt dolor Lorem id",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"in aliqua do\",\n  \"id\": \"urn:uuid:b3eb6af4-4acd-fce0-c3ba-bcf2c60ba09a\",\n  \"certificados\": [\n    {\n      \"nome\": \"incididunt aliquip\",\n      \"organizacaoEmissora\": \"proident incididunt\",\n      \"id\": \"37e04867-3440-da84-15ac-2e8895d656e9\",\n      \"expiracao\": true,\n      \"dataEmissao\": \"1983-08-30T14:31:14.003Z\",\n      \"dataExpiracao\": \"1964-03-23T01:28:02.284Z\",\n      \"codigoCredencial\": \"dolor amet quis deserunt\",\n      \"urlCredencial\": \"eiusmod ex\"\n    },\n    {\n      \"nome\": \"consectetur do anim\",\n      \"organizacaoEmissora\": \"adipisicing elit\",\n      \"id\": \"33e43594-e817-0823-81e0-cae76b842f42\",\n      \"expiracao\": true,\n      \"dataEmissao\": \"1991-08-26T16:21:38.488Z\",\n      \"dataExpiracao\": \"1995-12-21T13:11:41.787Z\",\n      \"codigoCredencial\": \"laboris Duis cillum\",\n      \"urlCredencial\": \"ex sed eiusmod consequat\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/especialidade/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"especialidade",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"in aliqua do\",\n  \"id\": \"urn:uuid:b3eb6af4-4acd-fce0-c3ba-bcf2c60ba09a\",\n  \"certificados\": [\n    {\n      \"nome\": \"incididunt aliquip\",\n      \"organizacaoEmissora\": \"proident incididunt\",\n      \"id\": \"37e04867-3440-da84-15ac-2e8895d656e9\",\n      \"expiracao\": true,\n      \"dataEmissao\": \"1983-08-30T14:31:14.003Z\",\n      \"dataExpiracao\": \"1964-03-23T01:28:02.284Z\",\n      \"codigoCredencial\": \"dolor amet quis deserunt\",\n      \"urlCredencial\": \"eiusmod ex\"\n    },\n    {\n      \"nome\": \"consectetur do anim\",\n      \"organizacaoEmissora\": \"adipisicing elit\",\n      \"id\": \"33e43594-e817-0823-81e0-cae76b842f42\",\n      \"expiracao\": true,\n      \"dataEmissao\": \"1991-08-26T16:21:38.488Z\",\n      \"dataExpiracao\": \"1995-12-21T13:11:41.787Z\",\n      \"codigoCredencial\": \"laboris Duis cillum\",\n      \"urlCredencial\": \"ex sed eiusmod consequat\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/especialidade/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"especialidade",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Delete Especialidade",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/especialidade/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"especialidade",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "ad sunt dolor Lorem id",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/especialidade/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"especialidade",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/especialidade/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"especialidade",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/especialidade/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"especialidade",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "ad sunt dolor Lorem id",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get Especialidade",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/especialidade",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"especialidade"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/especialidade",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"especialidade"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"nome\": \"commodo exercitation Duis sit\",\n    \"id\": \"f9dcdb97-7a35-fd87-91ba-e02e90eff643\",\n    \"certificados\": [\n      {\n        \"nome\": \"eu sed veniam\",\n        \"organizacaoEmissora\": \"voluptate\",\n        \"id\": \"f7b8db95-f898-23d1-30b3-59cbc1843e44\",\n        \"expiracao\": false,\n        \"dataEmissao\": \"1967-07-05T09:43:51.894Z\",\n        \"dataExpiracao\": \"1972-04-21T06:30:21.758Z\",\n        \"codigoCredencial\": \"adipisicing pariatur id ut\",\n        \"urlCredencial\": \"labore exercitation ex cillum\"\n      },\n      {\n        \"nome\": \"reprehenderit ipsum\",\n        \"organizacaoEmissora\": \"sed consectetur cupidatat id Lorem\",\n        \"id\": \"urn:uuid:da831093-7421-b683-4a81-ea4f20a73868\",\n        \"expiracao\": false,\n        \"dataEmissao\": \"1988-06-19T16:50:17.152Z\",\n        \"dataExpiracao\": \"1953-12-20T16:22:42.677Z\",\n        \"codigoCredencial\": \"occaecat enim\",\n        \"urlCredencial\": \"deserunt magna\"\n      }\n    ]\n  },\n  {\n    \"nome\": \"in ea\",\n    \"id\": \"3b3369a5-3ff5-6e53-b5d0-33260934a4ce\",\n    \"certificados\": [\n      {\n        \"nome\": \"est sit\",\n        \"organizacaoEmissora\": \"Lorem in\",\n        \"id\": \"urn:uuid:6cbf3fd0-898a-d607-2410-41b26fe51235\",\n        \"expiracao\": true,\n        \"dataEmissao\": \"1951-07-27T21:06:09.345Z\",\n        \"dataExpiracao\": \"2011-09-15T19:28:22.605Z\",\n        \"codigoCredencial\": \"ut non amet ex\",\n        \"urlCredencial\": \"ut deserunt\"\n      },\n      {\n        \"nome\": \"anim adipisicing ullamco dolore non\",\n        \"organizacaoEmissora\": \"ex do occaecat dolore laborum\",\n        \"id\": \"bbe4b27c-1041-6f8a-e3dc-36d8a4493765\",\n        \"expiracao\": true,\n        \"dataEmissao\": \"2021-02-06T20:47:55.749Z\",\n        \"dataExpiracao\": \"1960-07-28T19:58:35.777Z\",\n        \"codigoCredencial\": \"incididunt tempor sint\",\n        \"urlCredencial\": \"sed pariatur dol\"\n      }\n    ]\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Post Especialidade",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"in aliqua do\",\n  \"id\": \"urn:uuid:b3eb6af4-4acd-fce0-c3ba-bcf2c60ba09a\",\n  \"certificados\": [\n    {\n      \"nome\": \"incididunt aliquip\",\n      \"organizacaoEmissora\": \"proident incididunt\",\n      \"id\": \"37e04867-3440-da84-15ac-2e8895d656e9\",\n      \"expiracao\": true,\n      \"dataEmissao\": \"1983-08-30T14:31:14.003Z\",\n      \"dataExpiracao\": \"1964-03-23T01:28:02.284Z\",\n      \"codigoCredencial\": \"dolor amet quis deserunt\",\n      \"urlCredencial\": \"eiusmod ex\"\n    },\n    {\n      \"nome\": \"consectetur do anim\",\n      \"organizacaoEmissora\": \"adipisicing elit\",\n      \"id\": \"33e43594-e817-0823-81e0-cae76b842f42\",\n      \"expiracao\": true,\n      \"dataEmissao\": \"1991-08-26T16:21:38.488Z\",\n      \"dataExpiracao\": \"1995-12-21T13:11:41.787Z\",\n      \"codigoCredencial\": \"laboris Duis cillum\",\n      \"urlCredencial\": \"ex sed eiusmod consequat\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/especialidade",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"especialidade"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"in aliqua do\",\n  \"id\": \"urn:uuid:b3eb6af4-4acd-fce0-c3ba-bcf2c60ba09a\",\n  \"certificados\": [\n    {\n      \"nome\": \"incididunt aliquip\",\n      \"organizacaoEmissora\": \"proident incididunt\",\n      \"id\": \"37e04867-3440-da84-15ac-2e8895d656e9\",\n      \"expiracao\": true,\n      \"dataEmissao\": \"1983-08-30T14:31:14.003Z\",\n      \"dataExpiracao\": \"1964-03-23T01:28:02.284Z\",\n      \"codigoCredencial\": \"dolor amet quis deserunt\",\n      \"urlCredencial\": \"eiusmod ex\"\n    },\n    {\n      \"nome\": \"consectetur do anim\",\n      \"organizacaoEmissora\": \"adipisicing elit\",\n      \"id\": \"33e43594-e817-0823-81e0-cae76b842f42\",\n      \"expiracao\": true,\n      \"dataEmissao\": \"1991-08-26T16:21:38.488Z\",\n      \"dataExpiracao\": \"1995-12-21T13:11:41.787Z\",\n      \"codigoCredencial\": \"laboris Duis cillum\",\n      \"urlCredencial\": \"ex sed eiusmod consequat\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/especialidade",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"especialidade"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"nome\": \"in aliqua do\",\n  \"id\": \"urn:uuid:b3eb6af4-4acd-fce0-c3ba-bcf2c60ba09a\",\n  \"certificados\": [\n    {\n      \"nome\": \"incididunt aliquip\",\n      \"organizacaoEmissora\": \"proident incididunt\",\n      \"id\": \"37e04867-3440-da84-15ac-2e8895d656e9\",\n      \"expiracao\": true,\n      \"dataEmissao\": \"1983-08-30T14:31:14.003Z\",\n      \"dataExpiracao\": \"1964-03-23T01:28:02.284Z\",\n      \"codigoCredencial\": \"dolor amet quis deserunt\",\n      \"urlCredencial\": \"eiusmod ex\"\n    },\n    {\n      \"nome\": \"consectetur do anim\",\n      \"organizacaoEmissora\": \"adipisicing elit\",\n      \"id\": \"33e43594-e817-0823-81e0-cae76b842f42\",\n      \"expiracao\": true,\n      \"dataEmissao\": \"1991-08-26T16:21:38.488Z\",\n      \"dataExpiracao\": \"1995-12-21T13:11:41.787Z\",\n      \"codigoCredencial\": \"laboris Duis cillum\",\n      \"urlCredencial\": \"ex sed eiusmod consequat\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"in aliqua do\",\n  \"id\": \"urn:uuid:b3eb6af4-4acd-fce0-c3ba-bcf2c60ba09a\",\n  \"certificados\": [\n    {\n      \"nome\": \"incididunt aliquip\",\n      \"organizacaoEmissora\": \"proident incididunt\",\n      \"id\": \"37e04867-3440-da84-15ac-2e8895d656e9\",\n      \"expiracao\": true,\n      \"dataEmissao\": \"1983-08-30T14:31:14.003Z\",\n      \"dataExpiracao\": \"1964-03-23T01:28:02.284Z\",\n      \"codigoCredencial\": \"dolor amet quis deserunt\",\n      \"urlCredencial\": \"eiusmod ex\"\n    },\n    {\n      \"nome\": \"consectetur do anim\",\n      \"organizacaoEmissora\": \"adipisicing elit\",\n      \"id\": \"33e43594-e817-0823-81e0-cae76b842f42\",\n      \"expiracao\": true,\n      \"dataEmissao\": \"1991-08-26T16:21:38.488Z\",\n      \"dataExpiracao\": \"1995-12-21T13:11:41.787Z\",\n      \"codigoCredencial\": \"laboris Duis cillum\",\n      \"urlCredencial\": \"ex sed eiusmod consequat\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/especialidade",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"especialidade"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://localhost:7186"
+		}
+	]
+}

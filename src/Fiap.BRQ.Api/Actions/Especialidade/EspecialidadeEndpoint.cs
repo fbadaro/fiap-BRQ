@@ -7,16 +7,16 @@ public static class EspecialidadeEndpoint
     public static void MapEspecialidadeEndpoint(this WebApplication? app)
     {
         // LIST
-        app!.MapGet("/especialidade", async (IEspecialidadeService _EspecialidadeAppService) =>
-            await _EspecialidadeAppService.GetAllAsync())
+        app!.MapGet("/especialidade", async (IEspecialidadeService _especialidadeAppService) =>
+            await _especialidadeAppService.GetAllAsync())
         .Produces<List<EspecialidadeDTO>>(StatusCodes.Status200OK)
         .WithName("GetEspecialidade")
-        .WithTags("Especialidade");
+        .WithTags("Especialidade");        
 
         // GET
-        app!.MapGet("/especialidade/{id}", async (IEspecialidadeService _EspecialidadeAppService, Guid id) =>
+        app!.MapGet("/especialidade/{id}", async (IEspecialidadeService _especialidadeAppService, Guid id) =>
         {
-            var result = await _EspecialidadeAppService.GetById(id);
+            var result = await _especialidadeAppService.GetById(id);
 
             return result != null
                 ? Results.Ok(result)
@@ -28,9 +28,9 @@ public static class EspecialidadeEndpoint
         .WithTags("Especialidade");
 
         // POST
-        app!.MapPost("/especialidade", async (IEspecialidadeService _EspecialidadeAppService, EspecialidadeDTO Especialidade) =>
+        app!.MapPost("/especialidade", async (IEspecialidadeService _especialidadeAppService, EspecialidadeDTO Especialidade) =>
         {
-            var result = await _EspecialidadeAppService.CreateAsync(Especialidade);
+            var result = await _especialidadeAppService.CreateAsync(Especialidade);
 
             return result != null
             ? Results.CreatedAtRoute("GetEspecialidadeById", new { id = result.Id }, Especialidade)
@@ -42,9 +42,9 @@ public static class EspecialidadeEndpoint
         .WithTags("Especialidade");
 
         // UPDATE
-        app!.MapPut("/especialidade/{id}", async (IEspecialidadeService _EspecialidadeAppService, Guid id, EspecialidadeDTO Especialidade) =>
+        app!.MapPut("/especialidade/{id}", async (IEspecialidadeService _especialidadeAppService, Guid id, EspecialidadeDTO Especialidade) =>
         {
-            var result = await _EspecialidadeAppService.UpdateAsync(Especialidade);
+            var result = await _especialidadeAppService.UpdateAsync(Especialidade);
 
             return result != null
                 ? Results.NoContent()
@@ -57,8 +57,8 @@ public static class EspecialidadeEndpoint
         .WithTags("Especialidade");
 
         // DELETE
-        app!.MapDelete("/especialidade/{id}", async (IEspecialidadeService _EspecialidadeAppService, Guid id) =>
-            await _EspecialidadeAppService.DeleteAsync(id))
+        app!.MapDelete("/especialidade/{id}", async (IEspecialidadeService _especialidadeAppService, Guid id) =>
+            await _especialidadeAppService.DeleteAsync(id))
         .Produces(StatusCodes.Status400BadRequest)
         .Produces(StatusCodes.Status204NoContent)
         .Produces(StatusCodes.Status404NotFound)

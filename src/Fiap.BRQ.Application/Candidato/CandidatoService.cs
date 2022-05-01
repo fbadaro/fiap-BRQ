@@ -8,6 +8,7 @@ namespace Fiap.BRQ.Application.Candidato;
 
 public class CandidatoService : ICandidatoService
 {
+    private int _pageSize = 25;
     private readonly ICandidatoRepository _candidatoRepository;
     private readonly IMapper _mapper;
     private readonly CandidatoValidator _validator;
@@ -47,5 +48,11 @@ public class CandidatoService : ICandidatoService
         return _mapper.Map<CandidatoDTO>(candidato);
     }
 
-    public void Dispose() => _candidatoRepository?.Dispose();
+    public async Task<List<CandidatoDTO>> FindAllByEspecialidadeAsync(int page, string query)
+    {        
+        var candidatos = await Task.Run(() => _candidatoRepository.FindAllByEspecialidadeAsync(page, _pageSize, query));
+        return _mapper.Map<List<CandidatoDTO>>(candidatos.ToList());
+    }
+
+    public void Dispose() => _candidatoRepository?.Dispose();    
 }
