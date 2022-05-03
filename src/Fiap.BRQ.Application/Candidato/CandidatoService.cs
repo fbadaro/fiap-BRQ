@@ -48,9 +48,9 @@ public class CandidatoService : ICandidatoService
         return _mapper.Map<CandidatoDTO>(candidato);
     }
 
-    public async Task<List<CandidatoDTO>> FindAllByEspecialidadeAsync(int page, string query)
+    public async Task<List<CandidatoDTO>> FindAllByEspecialidadeAsync(int page, string especialidade, string candidato)
     {        
-        var candidatos = await Task.Run(() => _candidatoRepository.FindAllByEspecialidadeAsync(page, _pageSize, query));
+        var candidatos = await Task.Run(() => _candidatoRepository.FindAllByEspecialidadeAsync(page, _pageSize, especialidade, candidato ?? ""));
         return _mapper.Map<List<CandidatoDTO>>(candidatos.ToList());
     }
 

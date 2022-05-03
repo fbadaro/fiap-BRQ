@@ -14,9 +14,9 @@ public static class CandidatoEndpoint
         .WithTags("Candidato");
 
         // FIND
-        app!.MapGet("/candidato/find", async (int page, string query, ICandidatoService _especialidadeAppService) =>
+        app!.MapGet("/candidato/find", async (int page, string especialidade, string? candidato, ICandidatoService _especialidadeAppService) =>
         {            
-            var result = await _especialidadeAppService.FindAllByEspecialidadeAsync(page, query);
+            var result = await _especialidadeAppService.FindAllByEspecialidadeAsync(page, especialidade, candidato!);
 
             return result != null
                 ? Results.Ok(result)
