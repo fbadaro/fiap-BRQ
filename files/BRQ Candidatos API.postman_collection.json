@@ -543,7 +543,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/candidato/find?page=0&query=java,net",
+							"raw": "{{baseUrl}}/candidato/find?page=1&especialidade=.net&candidato=Candidato",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -554,13 +554,16 @@
 							"query": [
 								{
 									"key": "page",
-									"value": "0",
+									"value": "1",
 									"description": "(Required) "
 								},
 								{
-									"key": "query",
-									"value": "java,net",
-									"description": "(Required) "
+									"key": "especialidade",
+									"value": ".net"
+								},
+								{
+									"key": "candidato",
+									"value": "Candidato"
 								}
 							]
 						}
